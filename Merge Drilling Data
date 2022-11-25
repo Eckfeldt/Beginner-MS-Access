@@ -1,0 +1,3 @@
+SELECT GCL_POINT_FEATURES.holeid, GCL_POINT_FEATURES.depth, GCL_POINT_FEATURES.Dip, GCL_POINT_FEATURES.Dip_Direction, GCL_POINT_FEATURES.Feature, GCL_POINT_FEATURES.Feature_Confidence, MergedTable_Compiled_forME.Au_Best_ppm
+FROM GCL_POINT_FEATURES INNER JOIN MergedTable_Compiled_forME ON GCL_POINT_FEATURES.holeid = MergedTable_Compiled_forME.holeid
+WHERE (((GCL_POINT_FEATURES.depth)>=[MergedTable_Compiled_forME].[from] And (GCL_POINT_FEATURES.depth)<=[MergedTable_Compiled_forME].[to]));
